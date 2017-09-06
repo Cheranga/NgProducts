@@ -1,0 +1,46 @@
+*   ng new V2ProductApp
+
+*   ng serve --port 4201 -o
+
+*   Add bootstrap
+    -------------
+    ** npm install --save bootstrap
+    ** @import "~bootstrap/dist/css/bootstrap.min.css";
+
+*   ng g m products/product --flat -m app.module
+
+*   ng g c products/product-list --flat
+
+*   ng g s products/product.service -m products/product.module
+
+*   ng g class /product/product
+
+*   ??? How to pass currency formatter as a parameter
+    -------------------------------------------------
+    <td>{{product.price | currency:appCurrency:'true':'1.2-2'}}</td>
+
+*   External files or folders must be specified in the ".angular-cli.json" file under "Assets" section.
+    (The "api" folder is currently registered under that). This is MANDATORY, otherwise angular throw an error stating that the file cannot be found.
+
+
+*   TODO
+    ----
+    
+    Price Service
+    -------------
+    //Complete the 'price-service' (https://angular.io/guide/http)
+
+    Star component
+    --------------
+    //Implement the star rating component in the shared module and use it in the product-list component.
+    In the star component make the ability to send the actual star rating depending on the clicked star (when doing CRUD related stuff)
+
+    Routes
+    ------    
+    Create a 'product-routes' module, and define the routes for the 'product' features.    
+    Create an 'prodadd-v2-routes' module, and use the 'product-routes' module, and it's other routes.
+
+    Miscelleanous
+    -------------
+    Open the application in a specified browser
+    (https://stackoverflow.com/questions/34824621/opening-non-default-browser-with-lite-server-in-angular2-quick-start-guide)
